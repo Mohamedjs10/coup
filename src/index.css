@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "FuturaPTDemi";
+  src: local("FuturaPTDemi"),
+    url("./fonts/futra_pt/FuturaPTDemi.otf") format("opentype");
+  font-weight: bold;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  /* height: 100%; */
+  /* font-family: futura-pt, FuturaStd, Helvetica, Arial, sans-serif; */
+  /* font-family: GoldmanBold, FuturaStd, Helvetica, Arial, sans-serif; */
+  font-family: FuturaPTDemi;
 }
+w100 {
+  width: 100%;
+}
+.flex-r-jc-ac {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-r-js-as {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.flex-c-jc-ac {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* .red {
+  color: green;
+} */
+
+.container {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+/* .inputRounded .MuiOutlinedInput-root {
+  border-radius: 20px;
+} */
