@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import NavbarButton from "./mini-components/navbarButton";
 import { colors } from "../utils/consts";
+import { Link } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -110,15 +111,21 @@ export default function () {
             ml: 5,
           }}
         >
-          <PersonOutlineIcon
-            sx={{ color: colors.white, fontSize: 30 }}
-          ></PersonOutlineIcon>
-          <FavoriteBorderIcon
-            sx={{ color: colors.white, fontSize: 28 }}
-          ></FavoriteBorderIcon>
-          <WorkOutlineIcon
-            sx={{ color: colors.white, fontSize: 27 }}
-          ></WorkOutlineIcon>
+          <Box component={Link} to="/">
+            <PersonOutlineIcon
+              sx={{ color: colors.white, fontSize: 30 }}
+            ></PersonOutlineIcon>
+          </Box>
+          <Box component={Link} to="/">
+            <FavoriteBorderIcon
+              sx={{ color: colors.white, fontSize: 28 }}
+            ></FavoriteBorderIcon>
+          </Box>
+          <Box component={Link} to="/">
+            <WorkOutlineIcon
+              sx={{ color: colors.white, fontSize: 27 }}
+            ></WorkOutlineIcon>
+          </Box>
         </Box>
       </Box>
       <Box

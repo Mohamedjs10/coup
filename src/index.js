@@ -4,11 +4,23 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./fonts/futra_pt/FuturaPTBold.otf";
-
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useParams,
+  Link,
+  NavLink,
+  Navigate,
+  useNavigate,
+  Outlet,
+} from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

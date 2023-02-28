@@ -9,4 +9,5 @@ export const colors = {
   pink: "#f799ba",
   purple: "#9347fe",
   green: "#ccff01",
+  baby_blue: "#2c89f8",
 };
