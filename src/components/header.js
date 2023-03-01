@@ -254,7 +254,8 @@ export default function () {
           display: isVisible ? "none" : "",
           width: "100%",
           height: "200vh",
-          bgcolor: "grey",
+          zIndex: 2,
+          bgcolor: "#2d2d2d",
           opacity: "0.7",
           position: "absolute",
         }}
