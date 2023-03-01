@@ -9,13 +9,15 @@ import InputAdornment from "@mui/material/InputAdornment";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
+import Modal from "@mui/material/Modal";
+
 export default function () {
   const [isVisible, setIsVisible] = useState("none");
   const [dropdownType, setDropdownType] = useState("none");
   const [manWomanTab, setManWomanTab] = useState("woman");
 
   return (
-    <>
+    <Box sx={{ position: "relative" }}>
       <Box
         sx={{
           bgcolor: colors.dark_grey,
@@ -214,7 +216,6 @@ export default function () {
           />
         </Box>
       </Box>
-
       <Box
         onMouseEnter={() => {
           setIsVisible("");
@@ -223,11 +224,17 @@ export default function () {
           setIsVisible("none");
         }}
         sx={{
-          margin: "auto",
-          width: "1325px",
+          position: "absolute",
+          left: 0,
+          right: 0,
+          ml: "auto",
+          mr: "auto",
+          width: "1320px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          zIndex: 3,
+          // transition: "1s",
         }}
       >
         <Box
@@ -242,6 +249,16 @@ export default function () {
           {dropdownType}
         </Box>
       </Box>
-    </>
+      <Box
+        sx={{
+          display: isVisible ? "none" : "",
+          width: "100%",
+          height: "200vh",
+          bgcolor: "grey",
+          opacity: "0.7",
+          position: "absolute",
+        }}
+      ></Box>
+    </Box>
   );
 }

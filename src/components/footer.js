@@ -1,9 +1,12 @@
 import Box from "@mui/material/Box";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { colors } from "../utils/consts";
+import { EG } from "country-flag-icons/react/3x2";
+import { CountryDropdown } from "react-country-region-selector";
 
-export default function footer() {
+export default function Footer() {
+  const [country, selectCountry] = useState("");
   return (
     <div>
       <Box
@@ -12,6 +15,8 @@ export default function footer() {
           justifyContent: "space-around",
           color: colors.light_grey1,
           backgroundColor: colors.light_grey3,
+          pt: 3,
+          pb: 3,
         }}
       >
         <Box
@@ -218,11 +223,57 @@ export default function footer() {
             ASOS x Thrift+
           </Box>
         </Box>
-        <Box>a</Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 2,
+          }}
+        >
+          <Box
+            sx={{
+              fontSize: "18px",
+            }}
+          >
+            Shopping From
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              // alignItems: "center",
+              // justifyContent: "center",
+              fontSize: "13px",
+              textDecoration: "none",
+              color: colors.light_grey1,
+            }}
+          >
+            <Box>You are in</Box>
+            <Box sx={{ ml: 1, width: 20, height: 20 }}>
+              <EG title="United States" />
+            </Box>
+            <Box
+              sx={{
+                ml: 1,
+                mr: 1,
+              }}
+            >
+              |
+            </Box>
+            <Box sx={{ "& MuiBox-root select": { width: "50px" } }}>
+              <CountryDropdown
+                value={country}
+                onChange={(val) => selectCountry(val)}
+              />
+            </Box>
+          </Box>
+        </Box>
       </Box>
       <Box
         sx={{
           pl: 5,
+          pt: 1,
+          pb: 1,
           color: colors.light_grey1,
           backgroundColor: "#cfcfcf",
           textAlign: "left",
