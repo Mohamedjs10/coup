@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 import { colors } from "../utils/consts";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import Filter from "./filter";
 export default function filters() {
   return (
     <Box>
@@ -90,7 +91,13 @@ export default function filters() {
           borderTop: "1px solid grey",
         }}
       >
-        <Box className="container">xxxxxxxx</Box>
+        <Box className="container" sx={{ display: "flex" }}>
+          <Filter />
+          <Box>filter</Box>
+          <Box>filter</Box>
+          <Box>filter</Box>
+          <Box>filter</Box>
+        </Box>
       </Box>
     </Box>
   );

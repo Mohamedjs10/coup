@@ -11,6 +11,7 @@ export const colors = {
   purple: "#9347fe",
   green: "#ccff01",
   baby_blue: "#2c89f8",
+  transparent_grey: "#a6a3a2",
 };
 
 export const items = [
