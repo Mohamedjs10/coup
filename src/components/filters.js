@@ -156,12 +156,14 @@ export default function Filters() {
       <Box
         sx={{
           bgcolor: colors.light_grey3,
-          height: "200px",
           borderBottom: "1px solid grey",
           borderTop: "1px solid grey",
         }}
       >
-        <Box className="container" sx={{ display: "flex", flexWrap: "wrap" }}>
+        <Box
+          className="container vertical-container"
+          sx={{ display: "flex", flexWrap: "wrap" }}
+        >
           <Filter />
           <Filter />
           <Filter />
