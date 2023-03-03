@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 import { colors } from "../utils/consts";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Filter from "./filter";
-export default function filters() {
+import { display } from "@mui/system";
+export default function Filters() {
+  const [isTextOPen, setIsTextOpen] = useState(false);
   return (
     <Box>
       <Box
@@ -74,15 +78,81 @@ export default function filters() {
           </Box>
         </Box>
       </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        Women's Dr. Martens
+
+      <Box className="vertical-container">
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "25px",
+          }}
+        >
+          Women's Purses, Bags & Handbags
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            pt: 2,
+          }}
+        >
+          <Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "550px",
+                // wordbreak: "break-all",
+              }}
+            >
+              {!isTextOPen && (
+                <Box>
+                  Score an accessory win with our edit of women’s bags ...
+                </Box>
+              )}
+              {isTextOPen && (
+                <Box>
+                  Score an accessory win with our edit of women’s bags. With
+                  graphic-printed tote bags and 90s-inspired shoulder bags
+                  ruling the plus-one game RN, ASOS DESIGN is your go-to when it
+                  comes to staying on trend. Mix things up with quilted and
+                  embellished cross-body bags from Love Moschino and River
+                  Island, or shop something a little roomier with backpacks,
+                  holdalls and travel bags for upcoming vacays (and stay-cays).
+                  And if it’s purses and card holders you’re after, mock-croc
+                  styles from SVNX and Accessorize have your ‘fashion and
+                  function’ quota nailed.
+                </Box>
+              )}
+              <Box>
+                {!isTextOPen ? (
+                  <KeyboardArrowDownIcon
+                    sx={{
+                      cursor: "pointer",
+                    }}
+                    onClick={() => {
+                      setIsTextOpen(true);
+                    }}
+                  />
+                ) : (
+                  <KeyboardArrowUpIcon
+                    sx={{
+                      cursor: "pointer",
+                    }}
+                    onClick={() => {
+                      setIsTextOpen(false);
+                    }}
+                  />
+                )}
+              </Box>
+            </Box>
+          </Box>
+        </Box>
       </Box>
+
       <Box
         sx={{
           bgcolor: colors.light_grey3,
@@ -91,12 +161,17 @@ export default function filters() {
           borderTop: "1px solid grey",
         }}
       >
-        <Box className="container" sx={{ display: "flex" }}>
+        <Box className="container" sx={{ display: "flex", flexWrap: "wrap" }}>
           <Filter />
-          <Box>filter</Box>
-          <Box>filter</Box>
-          <Box>filter</Box>
-          <Box>filter</Box>
+          <Filter />
+          <Filter />
+          <Filter />
+          <Filter />
+          <Filter />
+          <Filter />
+          <Filter />
+          <Filter />
+          <Filter />
         </Box>
       </Box>
     </Box>
