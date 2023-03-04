@@ -260,6 +260,67 @@ export default function () {
           position: "absolute",
         }}
       ></Box>
+      <Box
+        className="container-p"
+        sx={{
+          bgcolor: colors.black,
+          height: "60px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          onClick={() => {}}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "70px",
+            height: "35px",
+            color: colors.white,
+            border: `2px solid ${colors.white}`,
+            transition: "1s",
+            "&:hover": {
+              cursor: "pointer",
+              color: colors.light_grey1,
+              border: `2px solid ${colors.light_grey1}`,
+            },
+          }}
+        >
+          WOMEN
+        </Box>
+        <Box
+          sx={{
+            width: "300px",
+            color: colors.white,
+            textAlign: "center",
+          }}
+        >
+          NEW HERE? Get 30% off 100,000+ styles! with code: IMNEW
+        </Box>
+        <Box
+          onClick={() => {}}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "70px",
+            height: "35px",
+            color: colors.white,
+            border: `2px solid ${colors.white}`,
+            transition: "1s",
+
+            "&:hover": {
+              cursor: "pointer",
+              color: colors.light_grey1,
+              border: `2px solid ${colors.light_grey1}`,
+            },
+          }}
+        >
+          MEN
+        </Box>
+      </Box>
     </Box>
   );
 }

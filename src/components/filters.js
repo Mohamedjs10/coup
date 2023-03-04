@@ -78,7 +78,6 @@ export default function Filters() {
           </Box>
         </Box>
       </Box>
-
       <Box className="vertical-container">
         <Box
           sx={{
@@ -152,7 +151,6 @@ export default function Filters() {
           </Box>
         </Box>
       </Box>
-
       <Box
         sx={{
           bgcolor: colors.light_grey3,

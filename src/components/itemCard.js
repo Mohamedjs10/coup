@@ -38,7 +38,7 @@ export default function ItemCard({ discount, sellingFast, moreColors, imgs }) {
           backgroundImage: `url(${currentBg})`,
           backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",
-          borderRadius: "2px",
+          // borderRadius: "2px",
           transition: "all .3s ease-in-out",
           "&:hover": {
             // transform: "scale(1.02)",
