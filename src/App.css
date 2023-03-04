@@ -17,3 +17,30 @@ w100 {
   justify-content: center;
   align-items: center;
 }
+
+.login-input {
+  background: #fff;
+  color: #525865;
+  border: 1px solid #2d2d2d;
+  /* border: 1px solid #d22b56; */
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1.45;
+  outline: none;
+  padding: 0.6em 1.45em 0.7em;
+  -webkit-transition: 0.18s ease-out;
+  -moz-transition: 0.18s ease-out;
+  -o-transition: 0.18s ease-out;
+  transition: 0.18s ease-out;
+  width: 300px;
+}
+
+.login-input:hover {
+  box-shadow: inset 0px 0px 8px #2d2d2d;
+  /* box-shadow: inset 0px 0px 8px #d22b56; */
+}
+
+.login-input:focus {
+  color: #4b515d;
+  box-shadow: inset 0px 0px 8px #2c89f8;
+}

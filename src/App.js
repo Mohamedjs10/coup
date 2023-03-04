@@ -9,10 +9,12 @@ import TrendingSection from "./components/trendingSection";
 import BrandsSection from "./components/brandsSection";
 import BrandsImgsSection from "./components/brandsImgsSection";
 import IconsSection from "./components/IconsSection";
+import Login from "./pages/Login";
 function App() {
   return (
     <div className="App">
-      <HeaderFooerWrapper>
+      <Login></Login>
+      {/* <HeaderFooerWrapper>
         <Filters />
         <Box
           sx={{
@@ -90,7 +92,7 @@ function App() {
       </HeaderFooerWrapper>
       <Routes>
         <Route path="/quotes" element={<></>} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }

@@ -9,12 +9,26 @@ import InputAdornment from "@mui/material/InputAdornment";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
+import CloseIcon from "@mui/icons-material/Close";
 import Modal from "@mui/material/Modal";
-
+import Popover from "@mui/material/Popover";
+import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
+import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+import SmsOutlinedIcon from "@mui/icons-material/SmsOutlined";
 export default function () {
   const [isVisible, setIsVisible] = useState("none");
   const [dropdownType, setDropdownType] = useState("none");
   const [manWomanTab, setManWomanTab] = useState("woman");
+  const [anchorEl, setAnchorEl] = useState(null);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
   return (
     <Box sx={{ position: "relative" }}>
@@ -115,8 +129,153 @@ export default function () {
         >
           <Box component={Link} to="/">
             <PersonOutlineIcon
+              onClick={handleClick}
               sx={{ color: colors.white, fontSize: 30 }}
             ></PersonOutlineIcon>
+
+            <Popover
+              sx={{
+                mt: "15px",
+                "& .MuiPaper-root": { borderRadius: 0 },
+              }}
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+            >
+              <Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    alignItems: "center",
+                    gap: 1,
+                    fap: 1,
+                    bgcolor: colors.light_grey2,
+                    p: 2,
+                    width: "300px",
+                  }}
+                >
+                  <Box
+                    component={Link}
+                    to="/sign-in"
+                    sx={{
+                      textDecoration: "underline",
+                      color: colors.black,
+                      "&:hover": {
+                        color: colors.baby_blue,
+                      },
+                    }}
+                  >
+                    Sign In
+                  </Box>
+                  <Box>|</Box>
+                  <Box
+                    component={Link}
+                    to="/sign-in"
+                    sx={{
+                      textDecoration: "underline",
+                      color: colors.black,
+                      "&:hover": {
+                        color: colors.baby_blue,
+                      },
+                    }}
+                  >
+                    Join
+                  </Box>
+
+                  <CloseIcon
+                    onClick={handleClose}
+                    sx={{
+                      ml: "auto",
+                      "&:hover": { color: colors.baby_blue, cursor: "pointer" },
+                    }}
+                  />
+                </Box>
+                <Box>
+                  <Box
+                    component={Link}
+                    to="/"
+                    sx={{
+                      textDecoration: "none",
+                      color: colors.black,
+                      "&:hover": {
+                        color: colors.baby_blue,
+                      },
+                      m: 2,
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                      gap: 2,
+                    }}
+                  >
+                    <PersonOutlineIcon />
+                    My Account
+                  </Box>
+                  <Box
+                    component={Link}
+                    to="/"
+                    sx={{
+                      textDecoration: "none",
+                      color: colors.black,
+                      "&:hover": {
+                        color: colors.baby_blue,
+                      },
+                      m: 2,
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                      gap: 2,
+                    }}
+                  >
+                    <Inventory2OutlinedIcon />
+                    My Orders
+                  </Box>
+                  <Box
+                    component={Link}
+                    to="/"
+                    sx={{
+                      textDecoration: "none",
+                      color: colors.black,
+                      "&:hover": {
+                        color: colors.baby_blue,
+                      },
+                      m: 2,
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                      gap: 2,
+                    }}
+                  >
+                    <HelpOutlineOutlinedIcon />
+                    Returns Information
+                  </Box>
+                  <Box
+                    component={Link}
+                    to="/"
+                    sx={{
+                      textDecoration: "none",
+                      color: colors.black,
+                      "&:hover": {
+                        color: colors.baby_blue,
+                      },
+                      m: 2,
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                      gap: 2,
+                    }}
+                  >
+                    <SmsOutlinedIcon />
+                    Contact Preferences
+                  </Box>
+                </Box>
+              </Box>
+            </Popover>
           </Box>
           <Box component={Link} to="/">
             <FavoriteBorderIcon
@@ -249,6 +408,7 @@ export default function () {
           {dropdownType}
         </Box>
       </Box>
+
       <Box
         sx={{
           display: isVisible ? "none" : "",
