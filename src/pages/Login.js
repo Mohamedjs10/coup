@@ -63,6 +63,99 @@ export default function Login() {
               Sign In
             </Box>
           </Link>
+          <Box sx={{ fontSize: "15px", textAlign: "center", mt: "10px" }}>
+            forget password
+          </Box>
+          <Box
+            sx={{
+              fontSize: "20px",
+              textAlign: "center",
+              mt: "20px",
+              color: colors.black,
+            }}
+          >
+            OR SIGN IN WITH...
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: 5,
+            color: colors.dark_grey,
+            fontSize: "20px",
+            mt: "30px",
+          }}
+        >
+          <Box
+            onClick={() => {
+              window.location.href = "https://www.google.com/";
+            }}
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              pt: 1,
+              pb: 1,
+              pr: 4,
+              pl: 4,
+              border: `2px solid ${colors.light_grey2}`,
+              "&:hover": { opacity: ".6" },
+              cursor: "pointer",
+            }}
+          >
+            <img
+              src="google.png"
+              width="20px"
+              style={{ paddingRight: "15px" }}
+            />
+            Google
+          </Box>
+          <Box
+            onClick={() => {
+              window.location.href = "https://www.apple.com/eg/";
+            }}
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              pt: 1,
+              pb: 1,
+              pr: 4,
+              pl: 4,
+              border: `2px solid ${colors.light_grey2}`,
+              "&:hover": { opacity: ".6" },
+              cursor: "pointer",
+            }}
+          >
+            <img
+              src="apple.png"
+              width="20px"
+              style={{ paddingRight: "15px" }}
+            />
+            Apple
+          </Box>
+          <Box
+            onClick={() => {
+              window.location.href = "https://www.facebook.com/";
+            }}
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              pt: 1,
+              pb: 1,
+              pr: 4,
+              pl: 4,
+              border: `2px solid ${colors.light_grey2}`,
+              "&:hover": { opacity: ".6" },
+              cursor: "pointer",
+            }}
+          >
+            <img src="fb.png" width="20px" style={{ paddingRight: "15px" }} />
+            Facebook
+          </Box>
         </Box>
       </Box>
     </Box>
