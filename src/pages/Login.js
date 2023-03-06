@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import { colors, items } from "../utils/consts";
 import { Link } from "react-router-dom";
 
 export default function Login() {
+  const [clicked, setClicked] = useState("sign-in");
   return (
     <Box
       sx={{
@@ -42,23 +43,29 @@ export default function Login() {
         >
           <Link style={{ textDecoration: "none" }}>
             <Box
+              onClick={() => {
+                setClicked("join");
+              }}
               sx={{
-                borderBottom: `2px solid ${colors.light_grey2}`,
-                pb: 2,
-                pr: 15.5,
-                pl: 15.5,
+                borderBottom: `2px solid ${
+                  clicked == "join" ? colors.baby_blue : colors.light_grey2
+                }`,
                 transition: "1s",
                 "&:hover": {
-                  borderBottom: `2px solid ${colors.baby_blue}`,
+                  // borderBottom: `2px solid ${colors.baby_blue}`,
                 },
               }}
             >
               <Box
                 sx={{
+                  pb: 2,
+                  pr: 15.5,
+                  pl: 15.5,
+                  color: clicked == "join" ? colors.dark_grey : "grey",
+
                   transition: ".2s",
-                  color: colors.dark_grey,
                   "&:hover": {
-                    opacity: ".4",
+                    opacity: clicked == "join" ? "" : ".4",
                   },
                 }}
               >
@@ -76,23 +83,30 @@ export default function Login() {
           </Box>
           <Link style={{ textDecoration: "none" }}>
             <Box
+              onClick={() => {
+                setClicked("sign-in");
+              }}
               sx={{
-                borderBottom: `2px solid ${colors.light_grey2}`,
-                pb: 2,
-                pl: 15.5,
-                pr: 15.5,
+                borderBottom: `2px solid ${
+                  clicked == "sign-in" ? colors.baby_blue : colors.light_grey2
+                }`,
+
                 transition: "1s",
                 "&:hover": {
-                  borderBottom: `2px solid ${colors.baby_blue}`,
+                  // borderBottom: `2px solid ${colors.baby_blue}`,
                 },
               }}
             >
               <Box
                 sx={{
+                  pb: 2,
+                  pl: 15.5,
+                  pr: 15.5,
                   transition: ".2s",
-                  color: colors.dark_grey,
+                  color: clicked == "sign-in" ? colors.dark_grey : "grey",
+
                   "&:hover": {
-                    opacity: ".4",
+                    opacity: clicked == "sign-in" ? "" : ".4",
                   },
                 }}
               >
