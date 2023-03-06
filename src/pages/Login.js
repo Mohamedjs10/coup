@@ -31,7 +31,77 @@ export default function Login() {
           alignItems: "center",
         }}
       >
-        <Box sx={{ mt: "" }}>Join & Sign In</Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            fontSize: "20px",
+            color: colors.dark_grey,
+            mb: 4,
+          }}
+        >
+          <Link style={{ textDecoration: "none" }}>
+            <Box
+              sx={{
+                borderBottom: `2px solid ${colors.light_grey2}`,
+                pb: 2,
+                pr: 15.5,
+                pl: 15.5,
+                transition: "1s",
+                "&:hover": {
+                  borderBottom: `2px solid ${colors.baby_blue}`,
+                },
+              }}
+            >
+              <Box
+                sx={{
+                  transition: ".2s",
+                  color: colors.dark_grey,
+                  "&:hover": {
+                    opacity: ".4",
+                  },
+                }}
+              >
+                Join
+              </Box>
+            </Box>
+          </Link>
+          <Box
+            sx={{
+              borderBottom: `2px solid ${colors.light_grey2}`,
+              pb: 2,
+            }}
+          >
+            |
+          </Box>
+          <Link style={{ textDecoration: "none" }}>
+            <Box
+              sx={{
+                borderBottom: `2px solid ${colors.light_grey2}`,
+                pb: 2,
+                pl: 15.5,
+                pr: 15.5,
+                transition: "1s",
+                "&:hover": {
+                  borderBottom: `2px solid ${colors.baby_blue}`,
+                },
+              }}
+            >
+              <Box
+                sx={{
+                  transition: ".2s",
+                  color: colors.dark_grey,
+                  "&:hover": {
+                    opacity: ".4",
+                  },
+                }}
+              >
+                Sign In
+              </Box>
+            </Box>
+          </Link>
+        </Box>
+
         <Box>
           <Box sx={{ mt: "10px" }}>EMAIL ADDRESS:</Box>
           <input
