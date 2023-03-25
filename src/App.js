@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Login></Login>
-      {/* <HeaderFooerWrapper>
+      <HeaderFooerWrapper>
         <Filters />
         <Box
           sx={{
@@ -92,7 +92,7 @@ function App() {
       </HeaderFooerWrapper>
       <Routes>
         <Route path="/quotes" element={<></>} />
-      </Routes> */}
+      </Routes>
     </div>
   );
 }
